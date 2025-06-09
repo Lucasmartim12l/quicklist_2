@@ -81,4 +81,4 @@ function verifyLocalStorageItems() {
    }
 }
 
-verifyLocalStorageItems()
+verifyLocalStorageItems() 
