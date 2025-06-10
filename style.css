@@ -1,32 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
-:root {
+:root{
     font-size: 62.5%;
-  --background-primary: #F4F5FB;
-  --background-secondary: #FFF;
-  --color-brand: #CA3884;
-  --color-brand-hover: #A52C6B;
-  --color-danger: #C93847;
-  --content-primary: #080B12;
-  --content-secondary: #374151;
-  --content-tertiary: #9CA3AF;
-  --always-white: #FFF;
-  --border-primary: #D1D5DB;
-  --border-hover: #B9C2D0;
+
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFF;
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFF;
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
 }
 
-body {
+body{
     font-size: 1.6rem;
     padding: 3.2rem;
-    background-color: var(--background-primary);
+    background: var(--background-primary);
 }
 
-header {
+header{
     margin-bottom: 4.4rem;
     max-width: 62.7rem;
     margin-inline: auto;
@@ -34,13 +35,14 @@ header {
     flex-direction: column;
     align-items: start;
 
-    img {
+
+    img{
         width: 15.4rem;
         margin-inline: auto;
         margin-bottom: 3rem;
     }
 
-    button {
+    button{
         border: none;
         background: none;
         font-size: 1.4rem;
@@ -58,7 +60,7 @@ header {
     }
 }
 
-main {
+main{
     max-width: 62.7rem;
     margin-inline: auto;
 }
@@ -74,8 +76,8 @@ main {
         margin-bottom: 1.6rem;
         outline: none;
         color: var(--content-primary);
-
-        &::placeholder {
+        
+        &::placeholder{
             color: var(--content-tertiary);
         }
 
@@ -88,27 +90,27 @@ main {
         }
     }
 
-    button {
-            background: var(--color-brand);
-            border: none;
-            color: var(--always-white);
-            width: 100%;
-            padding: 1rem 2.4rem ;
-            font-size: 1.6rem;
-            line-height: 2rem;
-            border-radius: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
+    button{
+        background: var(--color-brand);
+        border: none;
+        color: var(--always-white);
+        width: 100%;
+        padding: 1rem 2.4rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        border-radius: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
 
-            &:hover {
-                background: var(--color-brand-hover);
-            }
+        &:hover {
+            background: var(--color-brand-hover);
         }
+    }
 }
 
 .list {
     .item {
-        background: var(--background-secondary);
+        background-color: var(--background-secondary);
         padding: 1.2rem;
         margin-bottom: 1.2rem;
         display: flex;
@@ -120,7 +122,7 @@ main {
         border-radius: 1.2rem;
         box-shadow: 0 2px 6px rgba(8, 11, 18, 0.2);
 
-        div {
+        div{
             display: flex;
             gap: 1.2rem;
             align-items: center;
@@ -130,7 +132,7 @@ main {
             display: none;
         }
 
-        .custom-checkbox {
+        .custom-checkbox{
             width: 1.6rem;
             height: 1.6rem;
             border: 1px solid var(--border-primary);
@@ -138,14 +140,15 @@ main {
             cursor: pointer;
         }
 
-        label {
-         cursor: pointer;   
+        label{
+            cursor: pointer;
         }
 
         div:has(input:checked){
             .custom-checkbox {
+                background: var(--color-brand);
                 border: 1px solid var(--color-brand);
-                transition: bacground .2s ease;
+                transition: background .2s ease;
             }
 
             label {
@@ -154,49 +157,50 @@ main {
         }
 
         button {
-           background: none;
-           border: none;
-           display: flex;
-           align-items: center;
-           cursor: pointer; 
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
 
-           img {
-            width: 1.6rem;
-            opacity: .7;
-           }
+            img{
+                width: 1.6rem;
+                opacity: .7;
+            }
         }
     }
 }
 
 .warning {
-  background: var(--color-danger);
-  color: var(--always-white);
-  padding: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 1.2rem;
-  margin-top: 2.4rem;  
-
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity .4s ease, transform .4s ease ;
-
-  div {
+    background: var(--color-danger);
+    color: var(--always-white);
+    padding: 1.2rem;
     display: flex;
     align-items: center;
-    gap: .8rem;
-  }
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    margin-top: 2.4rem;
 
-  i {
-    font-size: 2rem;
-  }
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .4s ease, transform .4s ease;
 
-  button {
-    border: none;
-    background: var(--always-white);
-    cursor: pointer;
-  }
+    div{
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    i {
+        font-size: 2rem;
+    }
+
+    button{
+        border: none;
+        background: none;
+        color: var(--always-white);
+        cursor: pointer;
+    }
 }
 
 .hide-warning {
@@ -204,25 +208,25 @@ main {
     transform: translateY(-10px);
 }
 
-@media(min-width: 627px)  {
+@media(min-width: 627px) {
     header{
-        img {
+        img{
             margin-bottom: 6.4rem;
         }
     }
 
-    .add-item {
-       display: grid; 
-       grid-template-columns: repeat(18, 1fr);
-       gap: 1.6rem;
+    .add-item{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1.6rem;
 
-       input {
-        margin-bottom: 0;
-        grid-column: 1 / 8;
-       }
+        input{
+            margin-bottom: 0;
+            grid-column: 1 / 8;
+        }
 
-       button {
-        grid-column: 8 / 11;
-       }
+        button {
+            grid-column: 8 / 11;
+        }
     }
-} 
+}
